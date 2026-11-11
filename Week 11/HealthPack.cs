@@ -22,6 +22,9 @@ public class HealthPack : MonoBehaviour
             if (playerHealth.health < 100)
 			{
 				playerHealth.health += 10;
+				if (playerHealth.health > 100) {
+					playerHealth.health = 100;
+				}
 				Destroy(gameObject);
 			}
         }
